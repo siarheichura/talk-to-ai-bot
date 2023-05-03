@@ -7,7 +7,8 @@ import { openai } from './openai.js'
 const INITIAL_SESSION = {
   messages: []
 }
-const bot = new Telegraf(config.get('TELEGRAM_TOKEN'))
+// const bot = new Telegraf(config.get('TELEGRAM_TOKEN'))
+const bot = new Telegraf(process.env.TELEGRAM_TOKEN)
 
 bot.use(session())
 
